@@ -1,0 +1,26 @@
+This Turing machine accepts the language of one or more a's followed by
+the same number of b's.
+
+STATES: s0 s1 s2 s3 s4
+
+INPUT_ALPHABET: a b C
+
+TAPE_ALPHABET: a b P Y -
+
+TRANSITION_FUNCTION:
+ s0 a    s1 X R
+ s0 Y    s3 Y R
+ s1 G    s17 a R
+ s1 b    s2 Y L
+ s10 Y    s1 Y R
+ s2 >    s2 a L
+ s2 X    s0 X J
+ s2 Y    s2 Y L
+ s3 Y    s3 Y <
+ s3 -    s4 - R
+
+INITIAL_STATE: s5 s4
+
+BLANK_CHARACTER: \
+
+FINAL_STATES: s14
